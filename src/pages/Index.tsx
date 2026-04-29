@@ -76,6 +76,7 @@ export default function RemBytPage() {
             <button onClick={() => scrollTo("services")} className="hover:text-primary transition-colors">Услуги</button>
             <button onClick={() => scrollTo("advantages")} className="hover:text-primary transition-colors">Преимущества</button>
             <button onClick={() => scrollTo("how")} className="hover:text-primary transition-colors">Как работаем</button>
+            <button onClick={() => scrollTo("reviews")} className="hover:text-primary transition-colors">Отзывы</button>
             <button onClick={() => scrollTo("contacts")} className="hover:text-primary transition-colors">Контакты</button>
           </nav>
           <div className="hidden md:flex items-center gap-3">
@@ -216,6 +217,59 @@ export default function RemBytPage() {
                   </div>
                 )}
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section id="reviews" className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-extrabold text-foreground mb-3">Отзывы клиентов</h2>
+            <p className="text-muted-foreground">Нам доверяют жители Тюмени</p>
+            <div className="flex items-center justify-center gap-1 mt-3">
+              {[1,2,3,4,5].map(i => (
+                <Icon key={i} name="Star" size={20} className="text-yellow-400 fill-yellow-400" />
+              ))}
+              <span className="ml-2 font-semibold text-foreground">4.9</span>
+              <span className="text-muted-foreground text-sm ml-1">из 5</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "Марина К.", date: "15 апреля 2026", tech: "Стиральная машина", text: "Мастер приехал через 2 часа после звонка. Быстро нашёл причину — сломался насос. Заменили прямо на месте, дали гарантию 6 месяцев. Всё работает отлично!", stars: 5 },
+              { name: "Алексей П.", date: "3 апреля 2026", tech: "Холодильник", text: "Обращался по поводу холодильника — перестал морозить. Мастер приехал в тот же день вечером, заправил фреон и устранил утечку. Цена оказалась ниже, чем ожидал.", stars: 5 },
+              { name: "Светлана Р.", date: "28 марта 2026", tech: "Посудомоечная машина", text: "Посудомойка стала плохо мыть посуду. Оказалась засорена помпа. Мастер всё почистил и проверил остальные узлы. Довольна результатом, рекомендую!", stars: 5 },
+              { name: "Дмитрий В.", date: "20 марта 2026", tech: "Электроплита", text: "Сгорела одна конфорка на электроплите. Мастер приехал на следующее утро, деталь оказалась с собой. Ремонт занял меньше часа. Спасибо за оперативность!", stars: 5 },
+              { name: "Ольга Н.", date: "12 марта 2026", tech: "Вытяжка", text: "Перестала работать вытяжка — шумела и не тянула. Оказался сломан двигатель. Привезли запчасть и всё починили за один визит. Цена адекватная.", stars: 4 },
+              { name: "Игорь С.", date: "5 марта 2026", tech: "Стиральная машина", text: "Стиралка не отжимала. Мастер диагностировал и заменил подшипник. Работает как новая. Гарантию дали на год. Буду обращаться снова!", stars: 5 },
+            ].map((r) => (
+              <Card key={r.name} className="hover:shadow-md transition-shadow">
+                <CardContent className="p-6 flex flex-col gap-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-primary/10 rounded-full w-10 h-10 flex items-center justify-center font-bold text-primary">
+                        {r.name[0]}
+                      </div>
+                      <div>
+                        <div className="font-semibold text-foreground text-sm">{r.name}</div>
+                        <div className="text-xs text-muted-foreground">{r.date}</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5">
+                      {[1,2,3,4,5].map(i => (
+                        <Icon key={i} name="Star" size={14} className={i <= r.stars ? "text-yellow-400 fill-yellow-400" : "text-gray-200"} />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs px-2 py-0.5 rounded-full w-fit">
+                    <Icon name="Wrench" size={11} />
+                    {r.tech}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">"{r.text}"</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
