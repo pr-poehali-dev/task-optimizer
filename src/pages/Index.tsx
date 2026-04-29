@@ -365,6 +365,34 @@ export default function RemBytPage() {
         </div>
       </section>
 
+      {/* MAP */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-extrabold text-foreground mb-3">Зона обслуживания</h2>
+            <p className="text-muted-foreground">Выезжаем по всей Тюмени и области — мастер приедет к вам домой</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg border">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=68.978928%2C57.152985&z=11&l=map&pt=68.978928,57.152985,pm2rdl~68.978928,57.152985"
+              width="100%"
+              height="420"
+              style={{ border: "none", display: "block" }}
+              title="Зона обслуживания РемБыт — Тюмень"
+              allowFullScreen
+            />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            {["Центральный район", "Ленинский район", "Калининский район", "Восточный район", "Тюменский район"].map((zone) => (
+              <div key={zone} className="flex items-center gap-2 bg-white border rounded-full px-4 py-2 text-sm font-medium text-foreground shadow-sm">
+                <Icon name="MapPin" size={14} className="text-primary" />
+                {zone}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-foreground py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
