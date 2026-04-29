@@ -58,8 +58,8 @@ export default function LaunchPadPage() {
           <div className="flex items-center">
             <img
               src="https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/bucket/85435d89-86f6-4bf4-b710-f9160d2ed1ce.jpeg"
-              alt="РЕМБЫТ"
-              className="h-10 w-auto brightness-0 invert"
+              alt="РемБыт"
+              className="h-12 w-auto rounded-md"
             />
           </div>
           <nav className="hidden md:flex space-x-6 text-sm">
