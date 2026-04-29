@@ -69,9 +69,9 @@ export default function RemBytPage() {
             <button onClick={() => scrollTo("contacts")} className="hover:text-primary transition-colors">Контакты</button>
           </nav>
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+73452000000" className="flex items-center gap-2 text-primary font-bold text-lg hover:opacity-80">
+            <a href="tel:+79220774697" className="flex items-center gap-2 text-primary font-bold text-lg hover:opacity-80">
               <Icon name="Phone" size={18} />
-              +7 (3452) 00-00-00
+              +7 (922) 077-46-97
             </a>
             <Button onClick={() => scrollTo("contacts")} size="sm">Заявка</Button>
           </div>
@@ -85,7 +85,7 @@ export default function RemBytPage() {
             <button onClick={() => scrollTo("advantages")}>Преимущества</button>
             <button onClick={() => scrollTo("how")}>Как работаем</button>
             <button onClick={() => scrollTo("contacts")}>Контакты</button>
-            <a href="tel:+73452000000" className="text-primary font-bold">+7 (3452) 00-00-00</a>
+            <a href="tel:+79220774697" className="text-primary font-bold">+7 (922) 077-46-97</a>
           </div>
         )}
       </header>
@@ -115,10 +115,10 @@ export default function RemBytPage() {
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold px-8" onClick={() => scrollTo("contacts")}>
                 Вызвать мастера
               </Button>
-              <a href="tel:+73452000000">
+              <a href="tel:+79220774697">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-bold px-8 w-full sm:w-auto">
                   <Icon name="Phone" size={16} className="mr-2" />
-                  Позвонить
+                  +7 (922) 077-46-97
                 </Button>
               </a>
             </div>
@@ -225,7 +225,7 @@ export default function RemBytPage() {
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Телефон</div>
-                    <a href="tel:+73452000000" className="font-bold text-foreground hover:text-primary">+7 (3452) 00-00-00</a>
+                    <a href="tel:+79220774697" className="font-bold text-foreground hover:text-primary">+7 (922) 077-46-97</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
