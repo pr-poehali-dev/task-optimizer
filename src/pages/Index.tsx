@@ -52,7 +52,7 @@ export default function LaunchPadPage() {
 
   return (
     <div className="min-h-screen bg-background" style={{
-      backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.92) 100%), url('https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/files/a9e92e81-55c2-406e-af06-5127cb3740db.jpg')",
+      backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.65) 100%), url('https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/files/a9e92e81-55c2-406e-af06-5127cb3740db.jpg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundAttachment: "fixed"
