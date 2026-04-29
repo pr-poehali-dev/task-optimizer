@@ -38,7 +38,7 @@ export default function LaunchPadPage() {
               </div>
               <h2 className="text-2xl font-bold text-foreground">Заявка принята!</h2>
               <p className="text-muted-foreground">
-                Спасибо, {name}! Мы свяжемся с вами на <span className="font-medium text-foreground">{email}</span> сразу после запуска сервиса.
+                Спасибо, {name}! Команда РЕМБЫТ свяжется с вами на <span className="font-medium text-foreground">{email}</span> сразу после запуска.
               </p>
               <Button onClick={() => setIsSubmitted(false)} variant="outline" className="mt-4">
                 Добавить другой email
@@ -55,9 +55,12 @@ export default function LaunchPadPage() {
       {/* Header */}
       <header className="bg-primary text-primary-foreground py-4 px-6 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Icon name="Wrench" size={22} />
-            <h1 className="text-xl font-bold tracking-tight">МастерФикс</h1>
+          <div className="flex items-center">
+            <img
+              src="https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/bucket/85435d89-86f6-4bf4-b710-f9160d2ed1ce.jpeg"
+              alt="РЕМБЫТ"
+              className="h-10 w-auto brightness-0 invert"
+            />
           </div>
           <nav className="hidden md:flex space-x-6 text-sm">
             <a href="#" className="hover:opacity-75 transition-opacity">О нас</a>
@@ -154,11 +157,14 @@ export default function LaunchPadPage() {
       {/* Footer */}
       <footer className="bg-card border-t py-8 px-6">
         <div className="max-w-6xl mx-auto text-center space-y-3">
-          <div className="flex items-center justify-center gap-2 text-primary font-semibold">
-            <Icon name="Wrench" size={16} />
-            МастерФикс
+          <div className="flex items-center justify-center">
+            <img
+              src="https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/bucket/85435d89-86f6-4bf4-b710-f9160d2ed1ce.jpeg"
+              alt="РЕМБЫТ"
+              className="h-12 w-auto"
+            />
           </div>
-          <p className="text-muted-foreground text-sm">© 2026 МастерФикс. Профессиональный ремонт бытовой техники.</p>
+          <p className="text-muted-foreground text-sm">© 2026 РЕМБЫТ. Профессиональный ремонт бытовой техники.</p>
           <div className="flex justify-center space-x-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
               Политика конфиденциальности
