@@ -51,7 +51,12 @@ export default function LaunchPadPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{
+      backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.92) 100%), url('https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/files/a9e92e81-55c2-406e-af06-5127cb3740db.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed"
+    }}>
       {/* Header */}
       <header className="bg-primary text-primary-foreground py-4 px-6 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
