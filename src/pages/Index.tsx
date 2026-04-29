@@ -6,6 +6,7 @@ import Icon from "@/components/ui/icon"
 
 const LOGO = "https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/bucket/85435d89-86f6-4bf4-b710-f9160d2ed1ce.jpeg"
 const BG = "https://cdn.poehali.dev/projects/55597532-0db6-4162-b0a4-dd94eebff67e/files/e3cedaf6-d161-4c20-a31a-21c48cf517c3.jpg"
+const API_URL = "https://functions.poehali.dev/a772f00d-25ce-4408-a61d-3525a7512e44"
 
 const services = [
   { icon: "WashingMachine", label: "Стиральные машины" },
@@ -45,9 +46,18 @@ export default function RemBytPage() {
     e.preventDefault()
     if (!phone || !name) return
     setIsLoading(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
-    setIsLoading(false)
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone }),
+      })
+      if (res.ok) {
+        setIsSubmitted(true)
+      }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const scrollTo = (id: string) => {
